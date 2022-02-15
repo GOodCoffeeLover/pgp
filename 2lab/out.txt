@@ -1,0 +1,28 @@
+==29151== NVPROF is profiling process 29151, command: ./2lab
+==29151== Profiling application: ./2lab
+==29151== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   91.34%  99.564ms         1  99.564ms  99.564ms  99.564ms  kernel_gauss_first_iter(float4*, int, int, int, float*)
+                    7.62%  8.3064ms         1  8.3064ms  8.3064ms  8.3064ms  kernel_gauss_second_iter(uchar4*, int, int, int, float*)
+                    0.39%  420.59us         1  420.59us  420.59us  420.59us  [CUDA memcpy HtoA]
+                    0.37%  402.61us         1  402.61us  402.61us  402.61us  [CUDA memcpy DtoH]
+                    0.28%  302.96us         1  302.96us  302.96us  302.96us  [CUDA memcpy DtoA]
+                    0.00%  1.2490us         1  1.2490us  1.2490us  1.2490us  [CUDA memcpy HtoD]
+      API calls:   49.55%  110.58ms         2  55.291ms  280.62us  110.30ms  cudaMallocArray
+                   44.83%  100.04ms         2  50.022ms  362.58us  99.681ms  cudaFreeArray
+                    4.03%  9.0030ms         2  4.5015ms  10.732us  8.9923ms  cudaMemcpy
+                    1.06%  2.3654ms         3  788.45us  266.96us  1.0962ms  cudaFree
+                    0.25%  560.04us         2  280.02us  62.129us  497.91us  cudaMemcpyToArray
+                    0.13%  292.33us         3  97.441us  87.621us  107.26us  cudaMalloc
+                    0.06%  123.74us       101  1.2250us     119ns  54.046us  cuDeviceGetAttribute
+                    0.03%  77.684us         1  77.684us  77.684us  77.684us  cuDeviceTotalMem
+                    0.03%  60.118us         2  30.059us  25.362us  34.756us  cudaLaunchKernel
+                    0.01%  23.208us         1  23.208us  23.208us  23.208us  cuDeviceGetName
+                    0.01%  11.705us         2  5.8520us  5.4250us  6.2800us  cudaBindTextureToArray
+                    0.00%  6.1730us         1  6.1730us  6.1730us  6.1730us  cuDeviceGetPCIBusId
+                    0.00%  2.5750us         2  1.2870us  1.2820us  1.2930us  cudaUnbindTexture
+                    0.00%  1.8580us         3     619ns     169ns     965ns  cuDeviceGetCount
+                    0.00%     937ns         2     468ns     291ns     646ns  cuDeviceGet
+                    0.00%     635ns         2     317ns     309ns     326ns  cudaGetLastError
+                    0.00%     334ns         1     334ns     334ns     334ns  cudaCreateChannelDesc
+                    0.00%     232ns         1     232ns     232ns     232ns  cuDeviceGetUuid
